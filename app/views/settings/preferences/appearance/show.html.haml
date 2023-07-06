@@ -20,6 +20,17 @@
       #{t 'appearance.localization.body'} #{content_tag(:a, t('appearance.localization.guide_link_text'), href: t('appearance.localization.guide_link'), target: '_blank', rel: 'noopener')}
 
   = f.simple_fields_for :settings, current_user.settings do |ff|
+    %h4= t 'appearance.optional_feature'
+
+    .fields-group
+      = ff.input :web.mod_bigger_publish, as: :boolean, wrapper: :with_label, hint: true
+
+    .fields-group
+      = ff.input :web_mod_style, collection: ['default', 'compact', 'legacy'],label_method: lambda { |item| t("simple_form.hints.defaults.setting_webui_styles_#{item}") }, wrapper: :with_label, include_blank: false, hint: t('simple_form.hints.defaults.setting_webui_styles_hint')
+
+    .fields-group
+      = ff.input :web.mod_reverse_nav, as: :boolean, wrapper: :with_label, hint: true
+
     %h4= t 'appearance.advanced_web_interface'
 
     .fields-group
@@ -39,7 +50,7 @@
       = ff.input :'web.advanced_layout', wrapper: :with_label, hint: false, label: I18n.t('simple_form.labels.defaults.setting_advanced_layout')
       
     .fields-group
-      = f.input :setting_wider_column, as: :boolean, wrapper: :with_label, hint: true
+      = ff.input :web.mod_wider_column, as: :boolean, wrapper: :with_label, hint: true
 
     %h4= t 'appearance.animations_and_accessibility'
 
