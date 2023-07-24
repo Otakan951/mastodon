@@ -81,6 +81,7 @@
  * @property {boolean=} use_pending_items
  * @property {string} version
  * @property {string} sso_redirect
+ * @property {boolean} wider_column
  */
 
 /**
@@ -110,6 +111,7 @@ export const hasMultiColumnPath = initialPath === '/'
 const getMeta = (prop) => initialState?.meta && initialState.meta[prop];
 
 export const activityApiEnabled = getMeta('activity_api_enabled');
+export const advancedLayout = getMeta('advanced_layout');
 export const autoPlayGif = getMeta('auto_play_gif');
 export const boostModal = getMeta('boost_modal');
 export const deleteModal = getMeta('delete_modal');
@@ -140,6 +142,7 @@ export const unfollowModal = getMeta('unfollow_modal');
 export const useBlurhash = getMeta('use_blurhash');
 export const usePendingItems = getMeta('use_pending_items');
 export const version = getMeta('version');
+export const widerColumn = getMeta('wider_column');
 export const languages = initialState?.languages;
 export const criticalUpdatesPending = initialState?.critical_updates_pending;
 // @ts-expect-error
