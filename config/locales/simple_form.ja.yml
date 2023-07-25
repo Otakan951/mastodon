@@ -78,10 +78,10 @@ ja:
       filters:
         action: ほたがフィルタに一致したときに実行するアクションを選択
         actions:
-          hide: フィルタに一致した投稿を完全に非表示にします
-          warn: フィルタに一致した投稿を非表示にし、フィルタのタイトルを含む警告を表示します
+          hide: フィルタに一致したほたを完全に非表示にします
+          warn: フィルタに一致したほたを非表示にし、フィルタのタイトルを含む警告を表示します
       form_admin_settings:
-        activity_api_enabled: 週単位でローカルで公開された投稿数、アクティブユーザー数、新規登録者数を表示します
+        activity_api_enabled: 週単位でローカルで公開されたほた数、アクティブユーザー数、新規登録者数を表示します
         backups_retention_period: 生成されたユーザーのアーカイブを指定した日数の間保持します。
         bootstrap_timeline_accounts: これらのアカウントは、新しいユーザー向けのおすすめユーザーの一番上にピン留めされます。
         closed_registrations_message: アカウント作成を停止している時に表示されます

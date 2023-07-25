@@ -429,7 +429,7 @@ ja:
     export_domain_blocks:
       import:
         description_html: ドメインブロックのリストをインポートしようとしています。このリストを自分で作成していない場合は、慎重に確認してください。
-        existing_relationships_warning: 既存のフォロー関係
+        existing_relationships_warning: 既存のひらちょん関係
         private_comment_description_html: 'ブロックのインポート元を判別できるようにするため、ブロックは次のプライベートコメントを追加してインポートされます: <q>%{comment}</q>'
         private_comment_template: "%{source} から %{date} にインポートしました"
         title: ドメインブロックをインポート
@@ -1369,9 +1369,9 @@ ja:
       unrecognized_emoji: は絵文字として認識されていません
   relationships:
     activity: 活動
-    confirm_follow_selected_followers: 選択したフォロワーをフォローしてもよろしいですか？
-    confirm_remove_selected_followers: 選択したフォロワーを削除してもよろしいですか？
-    confirm_remove_selected_follows: 選択したフォローを削除してもよろしいですか？
+    confirm_follow_selected_followers: 選択したおたかんをひらちょんしてもよろしいですか？
+    confirm_remove_selected_followers: 選択したおたかんを削除してもよろしいですか？
+    confirm_remove_selected_follows: 選択したひらちょんを削除してもよろしいですか？
     dormant: 非アクティブ
     follow_selected_followers: 選択したおたかんをひらちょん
     followers: おたかん

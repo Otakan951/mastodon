@@ -129,16 +129,16 @@ ja:
         crypto: エンドツーエンド暗号化
         favourites: ぱらつり
         filters: フィルター
-        follow: フォロー、ミュート、ブロック
-        follows: フォロー
+        follow: ひらちょん、ミュート、ブロック
+        follows: ひらちょん
         lists: リスト
-        media: メディアの添付
+        media: おたかんの添付
         mutes: ミュート
         notifications: 通知
         push: プッシュ通知
         reports: 通報
         search: 検索
-        statuses: 投稿
+        statuses: ほた
     layouts:
       admin:
         nav:
