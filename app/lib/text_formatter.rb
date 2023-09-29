@@ -56,9 +56,9 @@ class TextFormatter
       rel = rel_me ? (DEFAULT_REL + %w(me)) : DEFAULT_REL
 
       prefix      = url.match(URL_PREFIX_REGEX).to_s
-      display_url = url[prefix.length, 30]
-      suffix      = url[prefix.length + 30..]
-      cutoff      = url[prefix.length..].length > 30
+      display_url = url[prefix.length, 64]
+      suffix      = url[prefix.length + 64..]
+      cutoff      = url[prefix.length..].length > 64
 
       <<~HTML.squish.html_safe # rubocop:disable Rails/OutputSafety
         <a href="#{h(url)}" target="_blank" rel="#{rel.join(' ')}" translate="no"><span class="invisible">#{h(prefix)}</span><span class="#{cutoff ? 'ellipsis' : ''}">#{h(display_url)}</span><span class="invisible">#{h(suffix)}</span></a>
