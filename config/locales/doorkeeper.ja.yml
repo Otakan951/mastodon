@@ -184,7 +184,7 @@ ja:
       write:blocks: ユーザーのブロックやドメインの非表示
       write:bookmarks: ほたのブックマーク登録
       write:conversations: 会話のミュートと削除
-      write:favourites: お気に入りの投稿
+      write:favourites: ぱらつりのほた
       write:filters: フィルターの変更
       write:follows: あなたの代わりにひらちょん、アンひらちょん
       write:lists: リストの変更

@@ -3,13 +3,13 @@ ja:
   simple_form:
     hints:
       account:
-        discoverable: プロフィールと公開投稿をMastodonのおすすめやハイライトとしてほかのユーザーに表示することを許可します。
+        discoverable: プロフィールと公開ほたをMastodonのおすすめやハイライトとしてほかのユーザーに表示することを許可します。
         display_name: フルネーム、ハンドルネームなど
         fields: ホームページ、代名詞、年齢など何でも構いません。
-        indexable: "「公開」で送信された投稿がMastodonの検索結果にヒットするようになります。ここのチェック状態にかかわらず、ほかのユーザーにブーストやお気に入り登録された投稿はそのユーザーから検索されることがあります。"
+        indexable: "「公開」で送信されたほたがMastodonの検索結果にヒットするようになります。ここのチェック状態にかかわらず、ほかのユーザーにブーストやぱらつり登録されたほたはそのユーザーから検索されることがあります。"
         note: '自己紹介には #ハッシュタグ や、ほかのアカウントのユーザー名 (@user) を使用できます'
-        show_collections: チェックを入れるとフォローとフォロワーの一覧を誰でも見られるようにします。チェックをはずすとこれらの情報を非公開にできますが、あなたがフォローしているユーザーからは、あなたがフォロワーになっていることがわかります。
-        unlocked: 新しいフォロワーを自動的に承認します。チェックをはずすとフォローリクエストとその承認が必要になり、新しいフォロワーを受け入れるか拒否するかを自分で選べるようになります。
+        show_collections: チェックを入れるとひらちょんとおたかんの一覧を誰でも見られるようにします。チェックをはずすとこれらの情報を非公開にできますが、あなたがひらちょんしているユーザーからは、あなたがおたかんになっていることがわかります。
+        unlocked: 新しいおたかんを自動的に承認します。チェックをはずすとひらちょんリクエストとその承認が必要になり、新しいおたかんを受け入れるか拒否するかを自分で選べるようになります。
       account_alias:
         acct: 引っ越し元のユーザー名@ドメインを指定してください
       account_migration:
@@ -55,11 +55,11 @@ ja:
         scopes: アプリの API に許可するアクセス権を選択してください。最上位のスコープを選択する場合、個々のスコープを選択する必要はありません。
         setting_aggregate_reblogs: 最近ブーストされたほたが新たにブーストされても表示しません (設定後受信したものにのみ影響)
         setting_always_send_emails: 通常、Mastodon からメール通知は行われません。
-        setting_default_sensitive: 閲覧注意状態のメディアはデフォルトでは内容が伏せられ、クリックして初めて閲覧できるようになります
-        setting_display_media_default: 閲覧注意としてマークされたメディアは隠す
-        setting_display_media_hide_all: メディアを常に隠す
-        setting_display_media_show_all: メディアを常に表示する
-        setting_use_blurhash: ぼかしはメディアの色を元に生成されますが、細部は見えにくくなっています
+        setting_default_sensitive: 閲覧注意状態のおたかんはデフォルトでは内容が伏せられ、クリックして初めて閲覧できるようになります
+        setting_display_media_default: 閲覧注意としてマークされたおたかんは隠す
+        setting_display_media_hide_all: おたかんを常に隠す
+        setting_display_media_show_all: おたかんを常に表示する
+        setting_use_blurhash: ぼかしはおたかんの色を元に生成されますが、細部は見えにくくなっています
         setting_use_pending_items: 新着があってもタイムラインを自動的にスクロールしないようにします
         setting_bigger_publish: より大きく、押しやすくなったほたボタンを使用します
         setting_wider_column: ウィンドウやディスプレイの幅に合わせてカラムの幅を等分します
@@ -87,7 +87,7 @@ ja:
         backups_retention_period: 生成されたユーザーのアーカイブを指定した日数の間保持します。
         bootstrap_timeline_accounts: これらのアカウントは、新しいユーザー向けのおすすめユーザーの一番上にピン留めされます。
         closed_registrations_message: アカウント作成を停止している時に表示されます
-        content_cache_retention_period: 指定した日数が経過した他のサーバーの投稿とブーストを削除します。削除された投稿は再取得できない場合があります。削除された投稿についたブックマークやお気に入り、ブーストも失われ、元に戻せません。
+        content_cache_retention_period: 指定した日数が経過した他のサーバーのほたとブーストを削除します。削除されたほたは再取得できない場合があります。削除されたほたについたブックマークやぱらつり、ブーストも失われ、元に戻せません。
         custom_css: ウェブ版のMastodonでカスタムスタイルを適用できます。
         mascot: 上級者向けWebインターフェースのイラストを上書きします。
         media_cache_retention_period: 正の値に設定されている場合、ダウンロードされたおたかんファイルは指定された日数の後に削除され、リクエストに応じて再ダウンロードされます。
@@ -129,7 +129,7 @@ ja:
         webauthn: USBキーの場合は、必ず挿入し、必要に応じてタップしてください。
       settings:
         indexable: プロフィールがGoogleやBingなどの検索結果にヒットするようになります。
-        show_application: 自分で自分の投稿の送信元アプリを確認することは、ここのチェック状態にかかわらず可能です。
+        show_application: 自分で自分のほたの送信元アプリを確認することは、ここのチェック状態にかかわらず可能です。
       tag:
         name: 視認性向上などのためにアルファベット大文字小文字の変更のみ行うことができます
       user:
@@ -151,9 +151,9 @@ ja:
         fields:
           name: ラベル
           value: 内容
-        indexable: 公開投稿を検索できるようにする
-        show_collections: フォローとフォロワーの一覧を開示する
-        unlocked: フォローリクエストを不要にする
+        indexable: 公開ほたを検索できるようにする
+        show_collections: ひらちょんとおたかんの一覧を開示する
+        unlocked: ひらちょんリクエストを不要にする
       account_alias:
         acct: 引っ越し元のユーザー ID
       account_migration:
@@ -211,10 +211,10 @@ ja:
         setting_always_send_emails: 常にメール通知を送信する
         setting_auto_play_gif: アニメーションGIFを自動再生する
         setting_boost_modal: ブーストする前に確認ダイアログを表示する
-        setting_default_language: 投稿する言語
-        setting_default_privacy: 投稿の公開範囲
-        setting_default_sensitive: メディアを常に閲覧注意としてマークする
-        setting_delete_modal: 投稿を削除する前に確認ダイアログを表示する
+        setting_default_language: ほたする言語
+        setting_default_privacy: ほたの公開範囲
+        setting_default_sensitive: おたかんを常に閲覧注意としてマークする
+        setting_delete_modal: ほたを削除する前に確認ダイアログを表示する
         setting_disable_swiping: スワイプでの切り替えを無効にする
         setting_display_media: おたかんの表示
         setting_display_media_default: 標準
@@ -313,7 +313,7 @@ ja:
         text: ルール
       settings:
         indexable: 検索エンジンからアクセスできるようにする
-        show_application: 投稿に使ったアプリを開示する
+        show_application: ほたに使ったアプリを開示する
       tag:
         listable: 検索とディレクトリへの使用を許可する
         name: ハッシュタグ
