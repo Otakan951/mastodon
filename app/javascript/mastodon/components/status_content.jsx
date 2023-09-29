@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { PureComponent } from 'react';
 
 import { FormattedMessage, injectIntl } from 'react-intl';
-import Permalink from './permalink';
+
 import classnames from 'classnames';
 import Permalink from './permalink';
 

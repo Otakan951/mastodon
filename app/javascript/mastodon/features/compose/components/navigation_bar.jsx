@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 import { FormattedMessage } from 'react-intl';
 
 import Permalink from '../../../components/permalink';
@@ -28,13 +29,16 @@ export default class NavigationBar extends ImmutablePureComponent {
         </Permalink>
 
         <div className='navigation-bar__profile'>
-          <Permalink href={this.props.account.get('url')} to={`/@${this.props.account.get('acct')}`}>
-            <strong className='navigation-bar__profile-account'>@{this.props.account.get('acct')}</strong>
-          </Permalink>
+          <span>
+            <Permalink href={this.props.account.get('url')} to={`/@${this.props.account.get('acct')}`}>
+              <strong className='navigation-bar__profile-account'>@{this.props.account.get('acct')}</strong>
+            </Permalink>
+          </span>
 
           <span>
             <a href='/settings/profile' className='navigation-bar__profile-edit'><FormattedMessage id='navigation_bar.edit_profile' defaultMessage='Edit profile' /></a>
           </span>
+          </div>
 
         <div className='navigation-bar__actions'>
           <ActionBar account={this.props.account} onLogout={this.props.onLogout} />
