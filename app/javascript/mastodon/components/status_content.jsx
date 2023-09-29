@@ -4,7 +4,7 @@ import { PureComponent } from 'react';
 import { FormattedMessage, injectIntl } from 'react-intl';
 import Permalink from './permalink';
 import classnames from 'classnames';
-import { Link } from 'react-router-dom';
+import Permalink from './permalink';
 
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import { connect } from 'react-redux';

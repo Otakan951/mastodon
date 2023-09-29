@@ -5,7 +5,7 @@ import { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 
 import classNames from 'classnames';
-import { Link } from 'react-router-dom';
+import Permalink from './permalink';
 
 import ImmutablePropTypes from 'react-immutable-proptypes';
 
@@ -71,12 +71,12 @@ ImmutableHashtag.propTypes = {
 };
 
 // @ts-expect-error
-const Hashtag = ({ name, to, people, uses, history, className, description, withGraph }) => (
+const Hashtag = ({ name, href, to, people, uses, history, className, description, withGraph }) => (
   <div className={classNames('trends__item', className)}>
     <div className='trends__item__name'>
-      <Link to={to}>
+      <Permalink href={href} to={to}>
         {name ? <>#<span>{name}</span></> : <Skeleton width={50} />}
-      </Link>
+      </Permalink>
 
       {description ? (
         <span>{description}</span>
