@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 import { defineMessages, injectIntl } from 'react-intl';
 
 import { Link } from 'react-router-dom';
@@ -31,10 +32,10 @@ class AccountAuthorize extends ImmutablePureComponent {
     return (
       <div className='account-authorize__wrapper'>
         <div className='account-authorize'>
-          <Permalink href={account.get('url')} to={`/@${account.get('acct')}`} className='detailed-status__display-name'>
+        <Link to={`/@${account.get('acct')}`} className='detailed-status__display-name'>
             <div className='account-authorize__avatar'><Avatar account={account} size={48} /></div>
             <DisplayName account={account} />
-          </Permalink>
+          </Link>
 
           <div className='account__header__content translate' dangerouslySetInnerHTML={content} />
         </div>
