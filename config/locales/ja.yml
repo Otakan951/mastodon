@@ -8,14 +8,14 @@ ja:
     title: このサーバーについて
   accounts:
     followers:
-      other: おたかん
-    following: ひらちょん中
+      other: おたかんー
+    following: ひらちょんー中
     instance_actor_flash: このアカウントは、個々のユーザーではなく、サーバー自体を表すために使用される仮想のユーザーです。 連合のために使用されるため、停止しないで下さい。
     last_active: 最後の活動
     link_verified_on: このリンクの所有権は%{date}に確認されました
     nothing_here: 何もありません！
     pin_errors:
-      following: おすすめしたい人はあなたが既にひらちょんしている必要があります
+      following: おすすめしたい人はあなたが既にひらちょんーしている必要があります
     posts:
       other: ほた
     posts_tab_heading: ほた
@@ -69,8 +69,8 @@ ja:
       enable_sign_in_token_auth: メールトークン認証を有効化
       enabled: 有効
       enabled_msg: "%{username}の無効化を解除しました"
-      followers: おたかん数
-      follows: ひらちょん数
+      followers: おたかんー数
+      follows: ひらちょんー数
       header: ヘッダー
       inbox_url: Inbox URL
       invite_request_text: 意気込み
@@ -225,7 +225,7 @@ ja:
         update_domain_block: ドメインブロックを更新
         update_ip_block: IPルールを更新
         update_report: 通報の更新
-        update_status: 投稿を更新
+        update_status: ほたを更新
         update_user_role: ロールを更新
       actions:
         approve_appeal_html: "%{name}さんが%{target}さんからの抗議を承認しました"
@@ -285,7 +285,7 @@ ja:
         update_domain_block_html: "%{name}さんが%{target}のドメインブロックを更新しました"
         update_ip_block_html: "%{name} さんがIP %{target} のルールを更新しました"
         update_report_html: "%{name}さんが通報 %{target} を更新しました"
-        update_status_html: "%{name}さんが%{target}さんの投稿を更新しました"
+        update_status_html: "%{name}さんが%{target}さんのほたを更新しました"
         update_user_role_html: "%{name}さんがロール『%{target}』を変更しました"
       deleted_account: 削除されたアカウント
       empty: ログが見つかりませんでした
@@ -383,12 +383,12 @@ ja:
       confirm_suspension:
         cancel: キャンセル
         confirm: 停止
-        permanent_action: 失われたデータやフォロー関係は、停止を解除しても元に戻せません。
+        permanent_action: 失われたデータやひらちょんー関係は、停止を解除しても元に戻せません。
         preamble_html: "<strong>%{domain}</strong> と、そのサブドメインに「停止」の処置を行います。"
-        remove_all_data: この操作により、対象のドメインにあるアカウントからのコンテンツやメディア、プロフィール情報はすべて削除されます。
+        remove_all_data: この操作により、対象のドメインにあるアカウントからのコンテンツやおたかん、プロフィール情報はすべて削除されます。
         stop_communication: 対象のサーバーとは通信を行わなくなります。
         title: "「%{domain}」ドメインブロックの確認"
-        undo_relationships: この操作により、このサーバーと対象サーバーのアカウント間のフォロー関係はすべて解除されます。
+        undo_relationships: この操作により、このサーバーと対象サーバーのアカウント間のひらちょんー関係はすべて解除されます。
       created_msg: ドメインブロック処理を完了しました
       destroyed_msg: ドメインブロックを外しました
       domain: ドメイン
@@ -401,7 +401,7 @@ ja:
         create: ブロックを作成
         hint: ドメインブロックはデータベース中のアカウント項目の作成を妨げませんが、遡って自動的に指定されたモデレーションをそれらのアカウントに適用します。
         severity:
-          desc_html: "<strong>制限</strong>は、このドメイン上のアカウントからのほたが、相手をひらちょんしている場合を除き非表示になります。<strong>停止</strong>は、このドメイン上のすべてのコンテンツ、おたかん、およびプロフィールデータを受け付けなくなります。おたかんファイルのみを拒否したい場合は<strong>なし</strong>を選択します。"
+          desc_html: "<strong>制限</strong>は、このドメイン上のアカウントからのほたが、相手をひらちょんーしている場合を除き非表示になります。<strong>停止</strong>は、このドメイン上のすべてのコンテンツ、おたかん、およびプロフィールデータを受け付けなくなります。おたかんファイルのみを拒否したい場合は<strong>なし</strong>を選択します。"
           noop: なし
           silence: 制限
           suspend: 停止
@@ -447,7 +447,7 @@ ja:
     export_domain_blocks:
       import:
         description_html: ドメインブロックのリストをインポートしようとしています。このリストを自分で作成していない場合は、慎重に確認してください。
-        existing_relationships_warning: 既存のひらちょん関係
+        existing_relationships_warning: 既存のひらちょんー関係
         private_comment_description_html: 'ブロックのインポート元を判別できるようにするため、ブロックは次のプライベートコメントを追加してインポートされます: <q>%{comment}</q>'
         private_comment_template: "%{source} から %{date} にインポートしました"
         title: ドメインブロックをインポート
@@ -456,13 +456,13 @@ ja:
         title: ドメインブロックをインポート
       no_file: ファイルが選択されていません
     follow_recommendations:
-      description_html: "<strong>おすすめひらちょんは、新規ユーザーが興味のあるコンテンツをすばやく見つけるのに役立ちます。</strong>ユーザーが他のユーザーとの交流を十分にしていない場合、パーソナライズされたおすすめひらちょんを生成する代わりに、これらのアカウントが表示されます。最近のエンゲージメントが最も高いアカウントと、特定の言語のローカルおたかん数が最も多いアカウントを組み合わせて､毎日再計算されます。"
+      description_html: "<strong>おすすめひらちょんーは、新規ユーザーが興味のあるコンテンツをすばやく見つけるのに役立ちます。</strong>ユーザーが他のユーザーとの交流を十分にしていない場合、パーソナライズされたおすすめひらちょんーを生成する代わりに、これらのアカウントが表示されます。最近のエンゲージメントが最も高いアカウントと、特定の言語のローカルおたかんー数が最も多いアカウントを組み合わせて､毎日再計算されます。"
       language: 言語
       status: ステータス
-      suppress: おすすめひらちょんに表示しない
+      suppress: おすすめひらちょんーに表示しない
       suppressed: 非表示
-      title: おすすめひらちょん
-      unsuppress: おすすめひらちょんを復元
+      title: おすすめひらちょんー
+      unsuppress: おすすめひらちょんーを復元
     instances:
       audit_log:
         title: 最近の監査ログ
@@ -494,10 +494,10 @@ ja:
         reason: 公開理由
         title: コンテンツ ポリシー
       dashboard:
-        instance_accounts_dimension: 最もひらちょんされているアカウント
+        instance_accounts_dimension: 最もひらちょんーされているアカウント
         instance_accounts_measure: 保存されたアカウント
-        instance_followers_measure: そこでの我々のおたかん
-        instance_follows_measure: リモートひらちょんしているアカウント
+        instance_followers_measure: そこでの我々のおたかんー
+        instance_follows_measure: リモートひらちょんーしているアカウント
         instance_languages_dimension: 人気の言語
         instance_media_attachments_measure: 保存されたおたかん
         instance_reports_measure: 通報
@@ -526,8 +526,8 @@ ja:
       purge_description_html: このドメインがオフラインであると思われる場合は、このドメインのすべてのアカウント記録と関連するデータをストレージから削除できます。 これは時間がかかることがあります。
       title: 既知のサーバー
       total_blocked_by_us: ブロック合計
-      total_followed_by_them: 被ひらちょん合計
-      total_followed_by_us: ひらちょん合計
+      total_followed_by_them: 被ひらちょんー合計
+      total_followed_by_us: ひらちょんー合計
       total_reported: 通報合計
       total_storage: 添付されたおたかん
       totals_time_period_hint_html: 以下に表示される合計には、すべての時間のデータが含まれています。
@@ -556,11 +556,11 @@ ja:
       no_ip_block_selected: 何も選択されていないためIPルールを変更しませんでした
       title: IPルール
     relationships:
-      title: "%{acct} さんのひらちょん・おたかん"
+      title: "%{acct} さんのひらちょんー・おたかんー"
     relays:
       add_new: リレーを追加
       delete: 削除
-      description_html: "<strong>連合リレー</strong>とは、登録しているサーバー間の公開ほたを仲介するサーバーです。<strong>中小規模のサーバーが連合のコンテンツを見つけるのを助けます。</strong>これを使用しない場合、ローカルユーザーがリモートユーザーを手動でひらちょんする必要があります。"
+      description_html: "<strong>連合リレー</strong>とは、登録しているサーバー間の公開ほたを仲介するサーバーです。<strong>中小規模のサーバーが連合のコンテンツを見つけるのを助けます。</strong>これを使用しない場合、ローカルユーザーがリモートユーザーを手動でひらちょんーする必要があります。"
       disable: 無効化
       disabled: 無効
       enable: 有効化
@@ -587,11 +587,11 @@ ja:
         mark_as_sensitive_description_html: 報告されたほたのおたかんは閲覧注意となり、ストライクが記録され、同じアカウントによる今後の違反行為のエスカレーションに役立てられます。
         other_description_html: アカウントの動作を制御するためのオプションや、報告されたアカウントへの通信をカスタマイズするためのオプションを確認してください。
         resolve_description_html: 報告されたアカウントに対していかなる措置も取られず、ストライクも記録されず、報告は終了します。
-        silence_description_html: このアカウントは、すでにひらちょんしている人、または手動で検索した人にしか見えないため、リーチが極端に制限されます。いつでも元に戻すことができます。このアカウントに対するすべての通報をクローズします。
+        silence_description_html: このアカウントは、すでにひらちょんーしている人、または手動で検索した人にしか見えないため、リーチが極端に制限されます。いつでも元に戻すことができます。このアカウントに対するすべての通報をクローズします。
         suspend_description_html: アカウントとそのすべての内容にアクセスできなくなり、最終的に削除され、やり取りは不可能になります。 30日以内であれば元に戻すことができます。このアカウントに対するすべての通報をクローズします。
       actions_description_html: このレポートへのアクションを決定してください。アカウントへ懲罰的な措置を取った場合、<strong>Span</strong>カテゴリが選択されている場合を除き、メール通知が送信されます。
       actions_description_remote_html: この通報を解決するためのアクションを選択してください。これは<strong>あなたの</strong>サーバーがこのリモートアカウントと通信し、そのコンテンツを処理する時のみ影響します。
-      actions_no_posts: 削除対象となる投稿がレポートに含まれていません
+      actions_no_posts: 削除対象となるほたがレポートに含まれていません
       add_to_report: 通報にさらに追加
       already_suspended_badges:
         local: このサーバーで停止済み
@@ -648,7 +648,7 @@ ja:
         actions:
           delete_html: 当該のほたを削除します
           mark_as_sensitive_html: 当該のほたに含まれるおたかんを閲覧注意にします
-          silence_html: "<strong>@%{acct}</strong>さんのプロフィールとコンテンツの表示範囲をひらちょん中の人や意図的にプロフィールにアクセスした人のみに制限することで、アカウントを発見されにくくします"
+          silence_html: "<strong>@%{acct}</strong>さんのプロフィールとコンテンツの表示範囲をひらちょんー中の人や意図的にプロフィールにアクセスした人のみに制限することで、アカウントを発見されにくくします"
           suspend_html: "<strong>@%{acct}</strong>さんのアカウントが凍結され、プロフィールとコンテンツへのアクセス、およびほたができなくなります"
         close_report: '通報 #%{id} を解決済みにします'
         close_reports_html: "<strong>@%{acct}</strong>さんに対する<strong>すべての</strong>通報を解決済みにします"
@@ -753,7 +753,7 @@ ja:
         desc_html: この設定を自分で変更していない全ユーザーに影響します
         title: デフォルトで検索エンジンによるインデックスを拒否する
       discovery:
-        follow_recommendations: おすすめひらちょん
+        follow_recommendations: おすすめひらちょんー
         preamble: Mastodon を知らないユーザーを取り込むには、興味深いコンテンツを浮上させることが重要です。サーバー上で様々なディスカバリー機能がどのように機能するかを制御します。
         profile_directory: ディレクトリ
         public_timelines: 公開タイムライン
@@ -927,12 +927,12 @@ ja:
       rejected: 拒否
       statuses:
         allow: 掲載を許可
-        allow_account: 投稿者を許可
+        allow_account: ほた者を許可
         confirm_allow: 本当に選択されたトゥートを許可しますか？
         confirm_allow_account: 本当に選択されたアカウントを許可しますか？
         confirm_disallow: 本当に選択されたトゥートを禁止しますか？
         confirm_disallow_account: 本当に選択されたアカウントを禁止しますか？
-        description_html: これらは、このサーバーが知っている、たくさんシェアされ、お気に入り登録されている投稿です。新しいユーザーや久しぶりにアクセスするユーザーがフォローする人を探すのに役立ちます。あなたが投稿者を承認し、投稿者が許可するまで、表示されることはありません。また、個別の投稿を許可または拒否することもできます。
+        description_html: これらは、このサーバーが知っている、たくさんシェアされ、ぱらつり登録されているほたです。新しいユーザーや久しぶりにアクセスするユーザーがひらちょんーする人を探すのに役立ちます。あなたがほた者を承認し、ほた者が許可するまで、表示されることはありません。また、個別のほたを許可または拒否することもできます。
         disallow: 掲載を拒否
         disallow_account: ほた者を拒否
         no_status_selected: 何も選択されていないため、変更されていません
@@ -1032,7 +1032,7 @@ ja:
     created_msg: エイリアスを作成しました。これで以前のアカウントから引っ越しを開始できます。
     deleted_msg: エイリアスを削除しました。指定されていたアカウントからは引っ越しできなくなります。
     empty: エイリアスがありません。
-    hint_html: 他のアカウントからこのアカウントにおたかんを引き継いで引っ越したい場合、ここでエイリアスを作成しておく必要があります。エイリアス自体は<strong>無害で、取り消す</strong>ことができます。<strong>引っ越しは以前のアカウント側から開始する必要があります</strong>。
+    hint_html: 他のアカウントからこのアカウントにおたかんーを引き継いで引っ越したい場合、ここでエイリアスを作成しておく必要があります。エイリアス自体は<strong>無害で、取り消す</strong>ことができます。<strong>引っ越しは以前のアカウント側から開始する必要があります</strong>。
     remove: エイリアスを削除
   appearance:
     advanced_web_interface: 上級者向けUI
@@ -1083,7 +1083,7 @@ ja:
     description:
       prefix_invited_by_user: "@%{name}さんがあなたをこのMastodonサーバーに招待しました"
       prefix_sign_up: 今すぐMastodonを始めよう！
-      suffix: アカウントがあれば、どんなMastodon互換サーバーのユーザーでもひらちょんしたりメッセージをやり取りできるようになります！
+      suffix: アカウントがあれば、どんなMastodon互換サーバーのユーザーでもひらちょんーしたりメッセージをやり取りできるようになります！
     didnt_get_confirmation: 確認メールを受信できない場合は
     dont_have_your_security_key: セキュリティキーを持っていませんか？
     forgot_password: パスワードをお忘れですか？
@@ -1130,7 +1130,7 @@ ja:
       title: "%{domain}にログイン"
     sign_up:
       manual_review: "%{domain} への登録にはモデレーターによる承認が必要です。審査の参考になるように、簡単な自己紹介や %{domain} に登録したい理由などを記入してください。"
-      preamble: この Mastodon サーバーのアカウントがあれば、ネットワーク上の他の人のアカウントがどこでホストされているかに関係なく、その人をひらちょんすることができます。
+      preamble: この Mastodon サーバーのアカウントがあれば、ネットワーク上の他の人のアカウントがどこでホストされているかに関係なく、その人をひらちょんーすることができます。
       title: さあ %{domain} でセットアップしましょう.
     status:
       account_status: アカウントの状態
@@ -1220,7 +1220,7 @@ ja:
       your_appeal_rejected: 申し立ては拒否されました
   edit_profile:
     basic_information: 基本情報
-    hint_html: "<strong>アカウントのトップページやほたの隣に表示される公開情報です。</strong>プロフィールとアイコンを設定することで、ほかのユーザーは親しみやすく、またひらちょんしやすくなります。"
+    hint_html: "<strong>アカウントのトップページやほたの隣に表示される公開情報です。</strong>プロフィールとアイコンを設定することで、ほかのユーザーは親しみやすく、またひらちょんーしやすくなります。"
     other: その他
   errors:
     '400': 送信されたリクエストは無効であるか、または不正なフォーマットです。
@@ -1338,17 +1338,17 @@ ja:
       blocking_html: "<strong>%{filename}</strong>の<strong>%{total_items}個のアカウント</strong>で<strong>ブロックしたアカウントリストを置き換えます</strong>。"
       bookmarks_html: "<strong>%{filename}</strong>の<strong>%{total_items}件のほた</strong>で<strong>ブックマークの一覧を置き換えます</strong>。"
       domain_blocking_html: "<strong>%{filename}</strong>の<strong>%{total_items}個のドメイン</strong>で<strong>非表示にしたドメインリストを置き換えます</strong>。"
-      following_html: "<strong>%{filename}</strong>の<strong>%{total_items}個のアカウント</strong>を<strong>ひらちょんします</strong>。また、<strong>この中に含まれていないアカウントのひらちょんを解除します</strong>。"
+      following_html: "<strong>%{filename}</strong>の<strong>%{total_items}個のアカウント</strong>を<strong>ひらちょんーします</strong>。また、<strong>この中に含まれていないアカウントのひらちょんーを解除します</strong>。"
       lists_html: "<strong>作成済みのリスト</strong>を<strong>%{filename}の内容で置き換えます</strong>。<strong>%{total_items}個のアカウント</strong>が新しいリストに追加されます。"
       muting_html: "<strong>%{filename}</strong>の<strong>%{total_items}個のアカウント</strong>で<strong>ミュートしたアカウントリストを置き換えます</strong>。"
     preambles:
       blocking_html: "<strong>%{filename}</strong>の<strong>%{total_items}個のアカウント</strong>を<strong>ブロックします</strong>。"
       bookmarks_html: "<strong>%{filename}</strong>の<strong>%{total_items}件のほた</strong>を<strong>ブックマークに追加します</strong>。"
       domain_blocking_html: "<strong>%{filename}</strong>の<strong>%{total_items}個のドメイン</strong>を<strong>非表示にします</strong>。"
-      following_html: "<strong>%{filename}</strong>の<strong>%{total_items}個のアカウント</strong>を<strong>ひらちょんします</strong>。"
+      following_html: "<strong>%{filename}</strong>の<strong>%{total_items}個のアカウント</strong>を<strong>ひらちょんーします</strong>。"
       lists_html: "<strong>%{filename}</strong>の<strong>%{total_items}個のアカウント</strong>を<strong>リストに追加します</strong>。追加先のリストがない場合は新しく作成されます。"
       muting_html: "<strong>%{filename}</strong>の<strong>%{total_items}個のアカウント</strong>を<strong>ミュートします</strong>。"
-    preface: 他のサーバーでエクスポートされたファイルから、ひらちょん/ブロックした情報をこのサーバー上のアカウントにインポートできます。
+    preface: 他のサーバーでエクスポートされたファイルから、ひらちょんー/ブロックした情報をこのサーバー上のアカウントにインポートできます。
     recent_imports: 最近のインポート
     states:
       finished: 完了
@@ -1362,18 +1362,18 @@ ja:
       blocking: ブロックのインポート
       bookmarks: ブックマークのインポート
       domain_blocking: ドメイン非表示のインポート
-      following: ひらちょんのインポート
+      following: ひらちょんーのインポート
       lists: リストのインポート
       muting: ミュートのインポート
     type: インポートする項目
     type_groups:
-      constructive: ひらちょん・ブックマーク
+      constructive: ひらちょんー・ブックマーク
       destructive: ブロック・ミュート
     types:
       blocking: ブロックしたアカウントリスト
       bookmarks: ブックマーク
       domain_blocking: 非表示にしたドメインリスト
-      following: ひらちょん中のアカウントリスト
+      following: ひらちょんー中のアカウントリスト
       lists: リスト
       muting: ミュートしたアカウントリスト
     upload: アップロード
@@ -1420,9 +1420,9 @@ ja:
       confirmation_html: Mastodon (%{domain}) による %{email} 宛の「%{type}」の配信を停止します。再度必要になった場合は<a href="%{settings_path}">メール通知の設定</a>からいつでも再開できます。
       emails:
         notification_emails:
-          favourite: お気に入りの通知メール
-          follow: フォローの通知メール
-          follow_request: フォローリクエストの通知メール
+          favourite: ぱらつりの通知メール
+          follow: ひらちょんーの通知メール
+          follow_request: ひらちょんーリクエストの通知メール
           mention: 返信の通知メール
           reblog: ブーストの通知メール
       resubscribe_html: 誤って解除した場合は<a href="%{settings_path}">メール通知の設定</a>から再購読できます。
@@ -1431,13 +1431,13 @@ ja:
   media_attachments:
     validations:
       images_and_video: 既に画像が追加されているため、動画を追加することはできません
-      not_found: メディア (%{ids}) が存在しないか、すでに添付して投稿されています
+      not_found: おたかん (%{ids}) が存在しないか、すでに添付してほたされています
       not_ready: ファイルのアップロードに失敗しました。しばらくしてからもう一度お試しください！
       too_many: 追加できるファイルは4つまでです
   migrations:
     acct: 引っ越し先の ユーザー名@ドメイン
     cancel: 引っ越しを取り消す
-    cancel_explanation: 引っ越しを取り消すと現在のアカウントが再度有効化されますが、引き継がれたおたかんは戻されません。
+    cancel_explanation: 引っ越しを取り消すと現在のアカウントが再度有効化されますが、引き継がれたおたかんーは戻されません。
     cancelled_msg: 引っ越し設定を取り消しました。
     errors:
       already_moved: は既に引っ越したアカウントと同じです
@@ -1445,14 +1445,14 @@ ja:
       move_to_self: 同じアカウントに引っ越すことはできません
       not_found: 見つかりませんでした
       on_cooldown: クールダウン期間中です
-    followers_count: 引き継がれるおたかん
+    followers_count: 引き継がれるおたかんー
     incoming_migrations: 別のアカウントから引っ越す
     incoming_migrations_html: 別のアカウントからこのアカウントに引っ越すには、まず<a href="%{path}">アカウントエイリアスを作成</a>する必要があります。
-    moved_msg: アカウントは%{acct}に引っ越し設定されており、おたかんは引っ越し先に引き継がれています。
+    moved_msg: アカウントは%{acct}に引っ越し設定されており、おたかんーは引っ越し先に引き継がれています。
     not_redirecting: アカウントは現在引っ越し設定されていません。
     on_cooldown: あなたは最近アカウントを引っ越しました。この機能は%{count}日後に再度利用できるようになります。
     past_migrations: 過去の引っ越し
-    proceed_with_move: おたかんを引き継ぐ
+    proceed_with_move: おたかんーを引き継ぐ
     redirected_msg: あなたのアカウントは現在%{acct}にリダイレクトされています。
     redirecting_to: アカウントは%{acct}に引っ越し設定されています。
     set_redirect: 引っ越しを設定
@@ -1461,8 +1461,8 @@ ja:
       before: '続行する前に、次の点を再度確認してください:'
       cooldown: 引っ越し後はクールダウン期間があります。その間再度引っ越すことはできません
       disabled_account: 引っ越した後はデータのエクスポートと再有効化を除きほとんどの機能が利用できなくなります
-      followers: すべてのおたかんを現在のアカウントから新しいアカウントに引き継ぎます
-      only_redirect_html: または、<a href="%{path}">おたかんを残したまま引っ越す</a>こともできます。
+      followers: すべてのおたかんーを現在のアカウントから新しいアカウントに引き継ぎます
+      only_redirect_html: または、<a href="%{path}">おたかんーを残したまま引っ越す</a>こともできます。
       other_data: その他のデータは自動的に引き継がれません
       redirect: プロフィールに引っ越し済みの通知が表示され、検索結果から除外されます
   moderation:
@@ -1484,14 +1484,14 @@ ja:
       subject: "%{name}さんにぱらつりに登録されました"
       title: 新たなぱらつり登録
     follow:
-      body: "%{name}さんにひらちょんされています！"
-      subject: "%{name}さんにひらちょんされています"
-      title: 新たなおたかん
+      body: "%{name}さんにひらちょんーされています！"
+      subject: "%{name}さんにひらちょんーされています"
+      title: 新たなおたかんー
     follow_request:
-      action: ひらちょんリクエストの管理
-      body: "%{name}さんがあなたにひらちょんをリクエストしました"
-      subject: "%{name}さんからのひらちょんリクエスト"
-      title: 新たなひらちょんリクエスト
+      action: ひらちょんーリクエストの管理
+      body: "%{name}さんがあなたにひらちょんーをリクエストしました"
+      subject: "%{name}さんからのひらちょんーリクエスト"
+      title: 新たなひらちょんーリクエスト
     mention:
       action: 返信
       body: "%{name}さんから返信がありました:"
@@ -1554,9 +1554,9 @@ ja:
   privacy:
     hint_html: "<strong>プロフィールの見えかたや、ほかのユーザーからの見つかりやすさを設定します。</strong>Mastodonには自分のアカウントのことをより多くの人に知ってもらうためのさまざまな機能があり、有効・無効をそれぞれ切り換えられます。使いかたや好みに合わせて調節しましょう。"
     privacy: プライバシー
-    privacy_hint_html: 自分に関する情報をどの程度開示するかについての設定項目です。ユーザーはほかのアカウントのひらちょん一覧を見て興味のあるアカウントを探したり、ほた元のアプリ名を見て自分が使いたいアプリの参考にすることがあります。希望に応じて、これらを見られないようにできます。
+    privacy_hint_html: 自分に関する情報をどの程度開示するかについての設定項目です。ユーザーはほかのアカウントのひらちょんー一覧を見て興味のあるアカウントを探したり、ほた元のアプリ名を見て自分が使いたいアプリの参考にすることがあります。希望に応じて、これらを見られないようにできます。
     reach: つながりやすさ
-    reach_hint_html: ほかのユーザーからの見つかりやすさと、ひらちょんされる方法についての設定項目です。「エクスプローラー」やおすすめのユーザーに掲載するか、また新しいおたかんをどのように受け入れるかをここで変更できます。
+    reach_hint_html: ほかのユーザーからの見つかりやすさと、ひらちょんーされる方法についての設定項目です。「エクスプローラー」やおすすめのユーザーに掲載するか、また新しいおたかんーをどのように受け入れるかをここで変更できます。
     search: 被検索性
     search_hint_html: 検索での見つかりやすさに関する設定項目です。公開ほたを検索できるようにするかや、Mastodonの外からweb検索でたどり着けるようにするかをここで変更できます。ただし検索エンジンのなかには、この設定に従わずに公開されている情報を利用するものがあるかもしれません。
     title: プライバシーとつながりやすさ
@@ -1571,14 +1571,14 @@ ja:
     title: "%{instance} から別のサーバーに移動します。"
   relationships:
     activity: 活動
-    confirm_follow_selected_followers: 選択したおたかんをひらちょんしてもよろしいですか？
-    confirm_remove_selected_followers: 選択したおたかんを削除してもよろしいですか？
-    confirm_remove_selected_follows: 選択したひらちょんを削除してもよろしいですか？
+    confirm_follow_selected_followers: 選択したおたかんーをひらちょんーしてもよろしいですか？
+    confirm_remove_selected_followers: 選択したおたかんーを削除してもよろしいですか？
+    confirm_remove_selected_follows: 選択したひらちょんーを削除してもよろしいですか？
     dormant: 非アクティブ
-    follow_failure: 選択したアカウントの一部をひらちょんできませんでした。
-    follow_selected_followers: 選択したおたかんをひらちょん
-    followers: おたかん
-    following: ひらちょん中
+    follow_failure: 選択したアカウントの一部をひらちょんーできませんでした。
+    follow_selected_followers: 選択したおたかんーをひらちょんー
+    followers: おたかんー
+    following: ひらちょんー中
     invited: 招待済み
     last_active: 最後の活動
     most_recent: 新着
@@ -1586,9 +1586,9 @@ ja:
     mutual: 相互
     primary: 標準
     relationship: 関係性
-    remove_selected_domains: 選択したドメインのおたかんを全て解除
-    remove_selected_followers: 選択したおたかんを解除
-    remove_selected_follows: 選択したユーザーをひらちょん解除
+    remove_selected_domains: 選択したドメインのおたかんーを全て解除
+    remove_selected_followers: 選択したおたかんーを解除
+    remove_selected_follows: 選択したユーザーをひらちょんー解除
     status: 状態
   remote_follow:
     missing_resource: リダイレクト先が見つかりませんでした
@@ -1671,9 +1671,9 @@ ja:
     notifications: メール通知
     preferences: ユーザー設定
     profile: プロフィール
-    relationships: フォロー・フォロワー
-    severed_relationships: 途切れたフォロー関係
-    statuses_cleanup: 投稿の自動削除
+    relationships: ひらちょんー・おたかんー
+    severed_relationships: 途切れたひらちょんー関係
+    statuses_cleanup: ほたの自動削除
     strikes: モデレーションストライク
     two_factor_authentication: 二要素認証
     webauthn_authentication: セキュリティキー
@@ -1683,9 +1683,9 @@ ja:
       account_suspension: アカウントの停止 (%{target_name})
       domain_block: 管理者によるサーバーの停止 (%{target_name})
       user_domain_block: ユーザーによるドメインブロック (%{target_name})
-    lost_followers: 解除されたフォロワー
-    lost_follows: 解除されたフォロー
-    preamble: ドメインをブロックしたりモデレーターによってリモートのサーバーが停止された場合、巻き込みでフォロー・フォロワー関係が失われることがあります。このようにして解除されたフォロー・フォロワーはリスト形式で取り出して内容を確認したり、対応している場合は他のサーバーでインポートできます。
+    lost_followers: 解除されたおたかんー
+    lost_follows: 解除されたひらちょんー
+    preamble: ドメインをブロックしたりモデレーターによってリモートのサーバーが停止された場合、巻き込みでひらちょんー・おたかんー関係が失われることがあります。このようにして解除されたひらちょんー・おたかんーはリスト形式で取り出して内容を確認したり、対応している場合は他のサーバーでインポートできます。
     purged: 管理者がサーバーの情報を削除したため表示できません。
     type: 理由
   statuses:
@@ -1704,7 +1704,7 @@ ja:
       other: '許可されていないハッシュタグが含まれています: %{tags}'
     edited_at_html: "%{date} 編集済み"
     errors:
-      in_reply_not_found: あなたが返信しようとしている投稿は存在しないようです。
+      in_reply_not_found: あなたが返信しようとしているほたは存在しないようです。
     over_character_limit: 上限は%{max}文字です
     pin_errors:
       direct: 返信したユーザーのみに表示されるほたはピン留めできません
@@ -1714,8 +1714,8 @@ ja:
     title: '%{name}: "%{quote}"'
     visibilities:
       direct: ダイレクト
-      private: おたかん限定
-      private_long: おたかんにのみ表示されます
+      private: おたかんー限定
+      private_long: おたかんーにのみ表示されます
       public: 公開
       public_long: 誰でも見ることができ、かつ公開タイムラインに表示されます
       unlisted: 非収載
@@ -1833,7 +1833,7 @@ ja:
         disable: アカウントは使用できませんが、プロフィールやその他のデータはそのまま残ります。 データのバックアップをリクエストしたり、アカウント設定を変更したり、アカウントを削除したりできます。
         mark_statuses_as_sensitive: あなたのいくつかのほたは、%{instance}のモデレータによって閲覧注意としてマークされています。これは、プレビューが表示される前にユーザがほた内のおたかんをタップする必要があることを意味します。あなたは将来ほたする際に自分自身でおたかんを閲覧注意としてマークすることができます。
         sensitive: 今後、アップロードされたすべてのおたかんファイルは閲覧注意としてマークされ、クリック解除式の警告で覆われるようになります。
-        silence: アカウントが制限されています。このサーバーでは既にひらちょんしている人だけがあなたのほたを見ることができます。 様々な発見機能から除外されるかもしれません。他の人があなたを手動でひらちょんすることは可能です。
+        silence: アカウントが制限されています。このサーバーでは既にひらちょんーしている人だけがあなたのほたを見ることができます。 様々な発見機能から除外されるかもしれません。他の人があなたを手動でひらちょんーすることは可能です。
         suspend: アカウントは使用できなくなり、プロフィールなどのデータにもアクセスできなくなります。約30日後にデータが完全に削除されるまでは、ログインしてデータのバックアップを要求することができますが、アカウントの停止回避を防ぐために一部の基本データを保持します。
       reason: '理由:'
       statuses: 'ほた:'
@@ -1865,20 +1865,20 @@ ja:
       edit_profile_title: プロフィールを設定しましょう
       explanation: 始めるにあたってのアドバイスです
       feature_action: もっと詳しく
-      feature_audience: Mastodonでは、誰の仲介もなく、あなた自身でオーディエンスの管理を行うことができます。あなたのインフラストラクチャー上にデプロイされたMastodon上でも、ほかのどんなMastodonサーバーのアカウントをフォローすることも、フォローされることもでき、それらはもちろんあなた自身で制御できます。
+      feature_audience: Mastodonでは、誰の仲介もなく、あなた自身でオーディエンスの管理を行うことができます。あなたのインフラストラクチャー上にデプロイされたMastodon上でも、ほかのどんなMastodonサーバーのアカウントをひらちょんーすることも、ひらちょんーされることもでき、それらはもちろんあなた自身で制御できます。
       feature_audience_title: 自信を持ってオーディエンスを構築
-      feature_control: ホームフィードで見たいものは、あなたが一番よく知っています。時間を無駄にするアルゴリズムや広告はありません。ひとつのアカウントからすべてのMastodonサーバーの投稿を時系列で受け取り、インターネットの隅っこをもう少しあなたらしくしましょう。
+      feature_control: ホームフィードで見たいものは、あなたが一番よく知っています。時間を無駄にするアルゴリズムや広告はありません。ひとつのアカウントからすべてのMastodonサーバーのほたを時系列で受け取り、インターネットの隅っこをもう少しあなたらしくしましょう。
       feature_control_title: 自分のタイムラインを管理
-      feature_creativity: Mastodonでは、自己表現を多様にするため、音声・動画・画像の投稿や、アクセシビリティ用説明、投票・コンテンツ警告・動くアバター・カスタム絵文字・サムネイル切り抜き設定などをサポートしています。アートや音楽、ポッドキャストを投稿したいあなたにもMastodonはピッタリです。
+      feature_creativity: Mastodonでは、自己表現を多様にするため、音声・動画・画像のほたや、アクセシビリティ用説明、投票・コンテンツ警告・動くアバター・カスタム絵文字・サムネイル切り抜き設定などをサポートしています。アートや音楽、ポッドキャストをほたしたいあなたにもMastodonはピッタリです。
       feature_creativity_title: 比類なきクリエイティビティ
-      feature_moderation: Mastodonでは意思決定はあなたの手にあります。それぞれのサーバーで適用されるルールや規則を策定できます。これらは、企業運営のソーシャルメディアとは違いサーバー単位でローカルに適用されるため、さまざまなグループのニーズに最も柔軟に対応することができるのです。
+      feature_moderation: Mastodonでは意思決定はあなたの手にあります。それぞれのサーバーで適用されるルールや規則を策定できます。これらは、企業運営のソーシャルおたかんとは違いサーバー単位でローカルに適用されるため、さまざまなグループのニーズに最も柔軟に対応することができるのです。
       feature_moderation_title: サーバー運営をあるべき姿で
-      follow_action: フォロー
-      follow_step: ユーザーをフォローしてみましょう。これがMastodonを楽しむ基本です。
+      follow_action: ひらちょんー
+      follow_step: ユーザーをひらちょんーしてみましょう。これがMastodonを楽しむ基本です。
       follow_title: 自分のホームタイムラインを作る
-      follows_subtitle: 人気アカウントをフォロー
-      follows_title: フォローを増やしてみませんか？
-      follows_view_more: フォローするユーザーを探す
+      follows_subtitle: 人気アカウントをひらちょんー
+      follows_title: ひらちょんーを増やしてみませんか？
+      follows_view_more: ひらちょんーするユーザーを探す
       hashtags_recent_count:
         other: 過去 2 日間で %{people} 人が共有
       hashtags_subtitle: 過去2日間のトレンドを見る
@@ -1886,7 +1886,7 @@ ja:
       hashtags_view_more: トレンドのハッシュタグをもっと見る
       post_action: 作成
       post_step: 試しになにか書いてみましょう。写真、ビデオ、アンケートなど、なんでも大丈夫です.
-      post_title: はじめての投稿
+      post_title: はじめてのほた
       share_action: 共有
       share_step: Mastodon アカウントをほかの人に紹介しましょう。
       share_title: プロフィールをシェアする
@@ -1894,7 +1894,7 @@ ja:
       subject: Mastodonへようこそ
       title: ようこそ、%{name}さん！
   users:
-    follow_limit_reached: あなたは現在 %{limit}人以上ひらちょんできません
+    follow_limit_reached: あなたは現在 %{limit}人以上ひらちょんーできません
     go_to_sso_account_settings: 外部サービスアカウントの設定はこちらで行ってください
     invalid_otp_token: 二要素認証コードが間違っています
     otp_lost_help_html: どちらも使用できない場合、%{email}に連絡を取ると解決できるかもしれません
