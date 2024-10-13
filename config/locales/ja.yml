@@ -1766,6 +1766,7 @@ ja:
     contrast: Mastodon (ハイコントラスト)
     default: Mastodon (ダーク)
     mastodon-light: Mastodon (ライト)
+    otakan: Otakan
     system: 自動 (システムのテーマを使用)
   time:
     formats:
