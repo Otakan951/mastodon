@@ -184,7 +184,7 @@ export const MediaItem: React.FC<{
 
       <a
         className='media-gallery__item-thumbnail'
-        href={`/@${acct}/${statusId}`}
+        href={status.get('url') as string}
         onClick={handleClick}
         target='_blank'
         rel='noopener noreferrer'

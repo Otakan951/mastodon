@@ -312,7 +312,7 @@ export const DetailedStatus: React.FC<{
           </div>
         )}
         <Link
-          to={`/@${status.getIn(['account', 'acct'])}`}
+          href={status.getIn(['account', 'url'])}
           data-hover-card-account={status.getIn(['account', 'id'])}
           className='detailed-status__display-name'
         >
@@ -356,7 +356,7 @@ export const DetailedStatus: React.FC<{
           <div className='detailed-status__meta__line'>
             <a
               className='detailed-status__datetime'
-              href={`/@${status.getIn(['account', 'acct'])}/${status.get('id')}`}
+              href={status.get('url')}
               target='_blank'
               rel='noopener noreferrer'
             >
