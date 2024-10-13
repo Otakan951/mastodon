@@ -25,9 +25,9 @@ class UserSettings
     setting :use_pending_items, default: false
     setting :use_system_font, default: false
     setting :disable_swiping, default: false
+    setting :disable_hover_cards, default: false
     setting :delete_modal, default: true
     setting :reblog_modal, default: false
-    setting :unfollow_modal, default: true
     setting :reduce_motion, default: false
     setting :expand_content_warnings, default: false
     setting :display_media, default: 'default', in: %w(default show_all hide_all)
@@ -36,6 +36,7 @@ class UserSettings
     setting :mod_wider_column, default: false
     setting :mod_webui_styles, default: 'default', in: %w(default compact legacy)
     setting :mod_reverse_nav, default: false
+    setting :hide_translate_button, default: false
   end
 
   namespace :notification_emails do

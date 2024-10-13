@@ -8,11 +8,14 @@ import Permalink from 'mastodon/components/permalink';
 
 import { connect } from 'react-redux';
 
+import SearchIcon from '@/material-icons/400-24px/search.svg?react';
+import EditIcon from '@/material-icons/400-24px/edit.svg?react';
 import { openModal } from 'mastodon/actions/modal';
 import { fetchServer } from 'mastodon/actions/server';
 import { Avatar } from 'mastodon/components/avatar';
 import { Icon } from 'mastodon/components/icon';
 import { WordmarkLogo, SymbolLogo } from 'mastodon/components/logo';
+import { identityContextPropShape, withIdentity } from 'mastodon/identity_context';
 import { registrationsOpen, me, sso_redirect } from 'mastodon/initial_state';
 
 const Account = connect(state => ({
@@ -41,12 +44,8 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 class Header extends PureComponent {
-
-  static contextTypes = {
-    identity: PropTypes.object,
-  };
-
   static propTypes = {
+    identity: identityContextPropShape,
     openClosedRegistrationsModal: PropTypes.func,
     location: PropTypes.object,
     signupUrl: PropTypes.string.isRequired,
@@ -60,7 +59,7 @@ class Header extends PureComponent {
   }
 
   render () {
-    const { signedIn } = this.context.identity;
+    const { signedIn } = this.props.identity;
     const { location, openClosedRegistrationsModal, signupUrl, intl } = this.props;
 
     let content;
@@ -68,8 +67,8 @@ class Header extends PureComponent {
     if (signedIn) {
       content = (
         <>
-          {location.pathname !== '/search' && <Link to='/search' className='button button-secondary' aria-label={intl.formatMessage(messages.search)}><Icon id='search' /></Link>}
-          {location.pathname !== '/publish' && <Link to='/publish' className='button bottom_right'><Icon id='pencil' fixedWidth /></Link>}
+          {location.pathname !== '/search' && <Link to='/search' className='button button-secondary' aria-label={intl.formatMessage(messages.search)}><Icon id='search' icon={SearchIcon} /></Link>}
+          {location.pathname !== '/publish' && <Link to='/publish' className='button bottom_right'><Icon id='edit' icon={EditIcon} /></Link>}
           <Account />
         </>
       );
@@ -77,8 +76,8 @@ class Header extends PureComponent {
 
       if (sso_redirect) {
         content = (
-            <a href={sso_redirect} data-method='post' className='button button--block button-tertiary'><FormattedMessage id='sign_in_banner.sso_redirect' defaultMessage='Login or Register' /></a>
-        )
+          <a href={sso_redirect} data-method='post' className='button button--block button-tertiary'><FormattedMessage id='sign_in_banner.sso_redirect' defaultMessage='Login or Register' /></a>
+        );
       } else {
         let signupButton;
 
@@ -121,4 +120,4 @@ class Header extends PureComponent {
 
 }
 
-export default injectIntl(withRouter(connect(mapStateToProps, mapDispatchToProps)(Header)));
+export default injectIntl(withRouter(withIdentity(connect(mapStateToProps, mapDispatchToProps)(Header))));
