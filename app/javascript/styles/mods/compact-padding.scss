@@ -19,11 +19,16 @@
 
   .status__content {
     padding-top: 0;
+    padding-bottom: 0;
   }
 
   .status__action-bar {
-    margin-top: 6px;
+    margin-top: 12px;
     justify-content: flex-start;
+  }
+
+  .status .status-card {
+    margin-top: 12px;
   }
 
   .status .media-gallery {
@@ -37,4 +42,44 @@
   .notification__message {
     padding: 12px 12px 0;
   }
+
+  .status__action-bar__button-wrapper {
+    flex-grow: 0;
+  }
+
+  .notification-group__icon {
+    width: 24px;   
+  }
+
+  .notification-ungrouped__header {
+    margin-bottom: 0;
+    padding-inline-start: 0;
+    padding: 0 12px;
+  }
+
+  .notification-ungrouped, .notification-group {
+    padding: 8px;
+  }
+
+  .notification-ungrouped {
+    .attachment-list,
+    .audio-player,
+    .content-warning,
+    .filter-warning,
+    .hashtag-bar,
+    .media-gallery,
+    .more-from-author,
+    .picture-in-picture-placeholder,
+    .status-card,
+    .status__action-bar,
+    .status__content,
+    .video-player {
+      margin-inline-start: 0;
+      width: 100%;
+    }
+    .status {
+      padding: 6px 8px;
+    }
+  }
+
 }
