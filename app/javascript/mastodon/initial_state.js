@@ -32,6 +32,7 @@
  * @property {boolean} registrations_open
  * @property {boolean} reduce_motion
  * @property {string} repository
+ * @property {boolean} reverse_nav
  * @property {boolean} search_enabled
  * @property {boolean} trends_enabled
  * @property {boolean} single_user_mode
@@ -110,6 +111,7 @@ export const profile_directory = getMeta('profile_directory');
 export const reduceMotion = getMeta('reduce_motion');
 export const registrationsOpen = getMeta('registrations_open');
 export const repository = getMeta('repository');
+export const reverseNav = getMeta('reverse_nav');
 export const searchEnabled = getMeta('search_enabled');
 export const trendsEnabled = getMeta('trends_enabled');
 export const showTrends = getMeta('show_trends');
