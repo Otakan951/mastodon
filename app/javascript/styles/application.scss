@@ -26,9 +26,9 @@
 @use 'mastodon/accessibility';
 @use 'mastodon/rich_text';
 
-@import 'mods/custom';
-@import 'mods/bigger-publish';
-@import 'mods/wider-column';
-@import 'mods/compact-padding';
-@import 'mods/legacy-style';
-@import 'mods/reverse-nav';
+@use 'mods/custom';
+@use 'mods/bigger-publish';
+@use 'mods/wider-column';
+@use 'mods/compact-padding';
+@use 'mods/legacy-style';
+@use 'mods/reverse-nav';
