@@ -5,6 +5,8 @@ import { injectIntl, defineMessages, FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 
+import Permalink from './permalink';
+
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import ImmutablePureComponent from 'react-immutable-pure-component';
 
@@ -566,7 +568,7 @@ class Status extends ImmutablePureComponent {
               <Permalink to={`/@${status.getIn(['account', 'acct'])}/${status.get('id')}`} href={status.get('url')} className='status__relative-time' target='_blank' rel='noopener noreferrer'>
                 <span className='status__visibility-icon'><VisibilityIcon visibility={status.get('visibility')} /></span>
                 <RelativeTimestamp timestamp={status.get('created_at')} />{status.get('edited_at') && <abbr title={intl.formatMessage(messages.edited, { date: intl.formatDate(status.get('edited_at'), { year: 'numeric', month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit' }) })}> *</abbr>}
-              </Link>
+              </Permalink>
 
               <Permalink to={`/@${status.getIn(['account', 'acct'])}`} href={status.getIn(['account', 'url'])} title={status.getIn(['account', 'acct'])} data-hover-card-account={status.getIn(['account', 'id'])} className='status__display-name' target='_blank' rel='noopener noreferrer'>
                 <div className='status__avatar'>
@@ -574,7 +576,7 @@ class Status extends ImmutablePureComponent {
                 </div>
 
                 <DisplayName account={status.get('account')} />
-              </Link>
+              </Permalink>
             </div>
 
             {matchedFilters && <FilterWarning title={matchedFilters.join(', ')} expanded={this.state.showDespiteFilter} onClick={this.handleFilterToggle} />}
