@@ -14,6 +14,7 @@
  * @property {string} admin
  * @property {boolean=} boost_modal
  * @property {boolean=} delete_modal
+ * @property {boolean=} missing_alt_text_modal
  * @property {boolean=} disable_swiping
  * @property {boolean=} disable_hover_cards
  * @property {string=} disabled_account_id
@@ -31,6 +32,7 @@
  * @property {boolean} registrations_open
  * @property {boolean} reduce_motion
  * @property {string} repository
+ * @property {boolean} reverse_nav
  * @property {boolean} search_enabled
  * @property {boolean} trends_enabled
  * @property {boolean} single_user_mode
@@ -45,6 +47,8 @@
  * @property {string} version
  * @property {string} sso_redirect
  * @property {boolean} wider_column
+ * @property {string} status_page_url
+ * @property {boolean} terms_of_service_enabled
  */
 
 /**
@@ -89,6 +93,7 @@ export const advancedLayout = getMeta('advanced_layout');
 export const autoPlayGif = getMeta('auto_play_gif');
 export const boostModal = getMeta('boost_modal');
 export const deleteModal = getMeta('delete_modal');
+export const missingAltTextModal = getMeta('missing_alt_text_modal');
 export const disableSwiping = getMeta('disable_swiping');
 export const disableHoverCards = getMeta('disable_hover_cards');
 export const disabledAccountId = getMeta('disabled_account_id');
@@ -106,6 +111,7 @@ export const profile_directory = getMeta('profile_directory');
 export const reduceMotion = getMeta('reduce_motion');
 export const registrationsOpen = getMeta('registrations_open');
 export const repository = getMeta('repository');
+export const reverseNav = getMeta('reverse_nav');
 export const searchEnabled = getMeta('search_enabled');
 export const trendsEnabled = getMeta('trends_enabled');
 export const showTrends = getMeta('show_trends');
@@ -118,11 +124,21 @@ export const useBlurhash = getMeta('use_blurhash');
 export const usePendingItems = getMeta('use_pending_items');
 export const version = getMeta('version');
 export const widerColumn = getMeta('wider_column');
-export const languages = initialState?.languages;
 export const criticalUpdatesPending = initialState?.critical_updates_pending;
-// @ts-expect-error
 export const statusPageUrl = getMeta('status_page_url');
 export const sso_redirect = getMeta('sso_redirect');
+export const termsOfServiceEnabled = getMeta('terms_of_service_enabled');
+
+const displayNames = Intl.DisplayNames && new Intl.DisplayNames(getMeta('locale'), {
+  type: 'language',
+  fallback: 'none',
+  languageDisplay: 'standard',
+});
+
+export const languages = initialState?.languages?.map(lang => {
+  // zh-YUE is not a valid CLDR unicode_language_id
+  return [lang[0], displayNames?.of(lang[0].replace('zh-YUE', 'yue')) || lang[1], lang[2]];
+});
 
 /**
  * @returns {string | undefined}
