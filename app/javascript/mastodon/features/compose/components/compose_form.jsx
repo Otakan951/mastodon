@@ -73,6 +73,7 @@ class ComposeForm extends ImmutablePureComponent {
     singleColumn: PropTypes.bool,
     lang: PropTypes.string,
     maxChars: PropTypes.number,
+    redirectOnSuccess: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -300,20 +301,21 @@ class ComposeForm extends ImmutablePureComponent {
                 <EmojiPickerDropdown onPickEmoji={this.handleEmojiPick} />
                 <CharacterCounter max={maxChars} text={this.getFulltextForCharacterCounting()} />
               </div>
-            </div>              
-            <div className='compose-form__submit'>
-              <Button
-                type='submit'
-                compact
-                disabled={!this.canSubmit()}
-                loading={isSubmitting}
-              >
-                {intl.formatMessage(
-                  this.props.isEditing ?
-                    messages.saveChanges : 
-                    (this.props.isInReply ? messages.reply : messages.publish)
-                )}
-              </Button>
+
+              <div className='compose-form__submit'>
+                <Button
+                  type='submit'
+                  compact
+                  disabled={!this.canSubmit()}
+                  loading={isSubmitting}
+                >
+                  {intl.formatMessage(
+                    this.props.isEditing ?
+                      messages.saveChanges :
+                      (this.props.isInReply ? messages.reply : messages.publish)
+                  )}
+                </Button>
+              </div>
             </div>
           </div>
         </div>
