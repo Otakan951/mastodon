@@ -79,6 +79,16 @@ class InitialStateSerializer < ActiveModel::Serializer
 
   private
 
+  def wrapstodon
+    current_campaign = AnnualReport.current_campaign
+    return if current_campaign.blank?
+
+    {
+      year: current_campaign,
+      state: AnnualReport.new(object.current_account, current_campaign).state,
+    }
+  end
+
   def default_meta_store
     {
       access_token: object.token,
@@ -131,6 +141,7 @@ class InitialStateSerializer < ActiveModel::Serializer
       hide_translate_button: object_account_user.setting_hide_translate_button,
       reverse_nav: object_account_user.setting_reverse_nav,
       emoji_style: object_account_user.settings['web.emoji_style'],
+      wrapstodon: wrapstodon,
     }
   end
 
@@ -139,7 +150,7 @@ class InitialStateSerializer < ActiveModel::Serializer
   end
 
   def serialized_account(account)
-    ActiveModelSerializers::SerializableResource.new(account, serializer: REST::AccountSerializer)
+    ActiveModelSerializers::SerializableResource.new(account, serializer: REST::AccountSerializer, scope_name: :current_user, scope: object.current_account&.user)
   end
 
   def instance_presenter

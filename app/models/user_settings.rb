@@ -16,6 +16,7 @@ class UserSettings
   setting :default_sensitive, default: false
   setting :default_privacy, default: nil, in: %w(public unlisted private)
   setting :default_quote_policy, default: 'public', in: %w(public followers nobody)
+  setting :email_subscriptions, default: false
 
   setting_inverse_alias :indexable, :noindex
 
@@ -34,14 +35,16 @@ class UserSettings
     setting :missing_alt_text_modal, default: true
     setting :reduce_motion, default: false
     setting :expand_content_warnings, default: false
-    setting :display_media, default: 'default', in: %w(default show_all hide_all)
+    setting :display_media, default: 'default', in: %w(hide_all default show_all)
     setting :auto_play, default: false
-    setting :emoji_style, default: 'auto', in: %w(auto native twemoji)
     setting :mod_bigger_publish, default: false
     setting :mod_wider_column, default: false
     setting :mod_webui_styles, default: 'default', in: %w(default compact legacy)
     setting :mod_reverse_nav, default: false
     setting :hide_translate_button, default: false
+    setting :emoji_style, default: 'auto', in: %w(auto native twemoji)
+    setting :color_scheme, default: 'auto', in: %w(auto light dark)
+    setting :contrast, default: 'auto', in: %w(auto high)
   end
 
   namespace :notification_emails do

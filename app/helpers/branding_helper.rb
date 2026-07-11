@@ -15,10 +15,10 @@ module BrandingHelper
   end
 
   def _logo_as_symbol_icon
-    content_tag(:svg, tag.use(href: '#logo-symbol-icon'), viewBox: '0 0 79 79', class: 'logo logo--icon')
+    tag.svg(tag.use(href: '#logo-symbol-icon'), viewBox: '0 0 79 79', class: 'logo logo--icon')
   end
 
   def render_logo
-    image_tag(frontend_asset_path('images/logo.svg'), alt: 'Mastodon', class: 'logo logo--icon')
+    image_tag(frontend_asset_path('images/logo_icon.png'), alt: 'Otachon', class: 'logo logo--icon')
   end
 end
