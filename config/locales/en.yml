@@ -2193,6 +2193,9 @@ en:
     title: The terms of service of %{domain} are changing
   themes:
     default: Mastodon
+    otakan: otakan
+  themes:
+    default: Mastodon
   time:
     formats:
       default: "%b %d, %Y, %H:%M"
