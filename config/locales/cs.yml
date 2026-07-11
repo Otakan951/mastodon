@@ -4,6 +4,7 @@ cs:
     about_mastodon_html: 'Sociální síť budoucnosti: žádné reklamy, žádné korporátní sledování, etický design a decentralizace! S Mastodonem vlastníte svoje data!'
     contact_missing: Nenastaveno
     contact_unavailable: Neuvedeno
+    default_thumbnail_description: Dva usmívající se kreslení mastodonti (kteří vypadají jako sloni) si mezi sebou házejí papírové letadélko. Jsou obklopeni jasně modrou oblohou a létajícími planetami se stromy, na kterých jsou další mastodonti.
     hosted_on: Mastodon na doméně %{domain}
     title: O službě
   accounts:
@@ -275,6 +276,7 @@ cs:
         demote_user_html: Uživatel %{name} degradoval uživatele %{target}
         destroy_announcement_html: Uživatel %{name} odstranil oznámení %{target}
         destroy_canonical_email_block_html: "%{name} odblokoval*a e-mail s hashem %{target}"
+        destroy_collection_html: "%{name} odstranil sbírku od %{target}"
         destroy_custom_emoji_html: "%{name} odstranil emoji %{target}"
         destroy_domain_allow_html: Uživatel %{name} zakázal federaci s doménou %{target}
         destroy_domain_block_html: Uživatel %{name} odblokoval doménu %{target}
@@ -314,6 +316,7 @@ cs:
         unsilence_account_html: Uživatel %{name} zrušil omezení účtu %{target}
         unsuspend_account_html: Uživatel %{name} zrušil pozastavení účtu uživatele %{target}
         update_announcement_html: Uživatel %{name} aktualizoval oznámení %{target}
+        update_collection_html: "%{name} aktualizoval sbírku od %{target}"
         update_custom_emoji_html: Uživatel %{name} aktualizoval emoji %{target}
         update_domain_block_html: "%{name} aktualizoval blokaci domény %{target}"
         update_ip_block_html: "%{name} změnil pravidlo pro IP %{target}"
@@ -351,14 +354,22 @@ cs:
       updated_msg: Oznámení bylo úspěšně aktualizováno!
     collections:
       accounts: Účty
+      back_to_account: Zpět na stránku účtu
+      back_to_report: Zpět na stránku hlášení
+      batch:
+        add_to_report: 'Přidat do hlášení #%{id}'
+        remove_from_report: Odebrat z hlášení
+        report: Hlášení
       collection_title: Sbírka od %{name}
       contents: Obsah
+      no_collection_selected: Žádná sbírka nebyla změněna, jelikož nebyla ani žádná vybrána
       number_of_accounts:
         few: "%{count} účty"
         many: "%{count} účtů"
         one: 1 účet
         other: "%{count} účtů"
       open: Otevřít
+      title: Sbírky účtu - @%{name}
       view_publicly: Zobrazit veřejně
     critical_update_pending: Čeká se na kritickou aktualizaci
     custom_emojis:
@@ -502,24 +513,89 @@ cs:
         title: Blokovat novou e-mailovou doménu
       no_email_domain_block_selected: Žádné blokace e-mailové domény nebyly změněny, protože žádné nebyly vybrány
       not_permitted: Nepovoleno
+      reset: Obnovit
       resolved_dns_records_hint_html: Doménové jméno vede na následující MX domény, které mají nakonec na starost přijímání e-mailů. Blokování MX domény zablokuje registrace z jakékoliv e-mailové adresy, která používá stejnou MX doménu, i když je viditelné doménové jméno jiné. <strong>Dejte si pozor, abyste nezablokovali velké e-mailové poskytovatele.</strong>
       resolved_through_html: Přeložena přes %{domain}
+      search: Hledat
       title: Blokované e-mailové domény
     email_subscriptions:
       accounts:
         account: Účet
+        empty:
+          hint: Žádný účet zatím nemá odběratele.
+          no_lists_yet: Zatím žádné seznamy
         last_email: Poslední e-mail
+        lead: Účty, které tuto vlastnost povolily a mají sledující, se ukáží níže.
+        show:
+          confirm_disable_feature: Zakázat emailové newslettery pro %{name}? Emailové aktualizace nebudou tomuto účtu zasílány. Uživatel stále bude moci tuto vlastnost ve svém nastavení. Pro úplné odstranění přístupu k této vlastnosti upravte uživatelská práva v Rolích.
+          confirm_remove_subscriber: "%{email} již nebude dostávat emaily od %{name}. Tuto akci nelze vzít zpět."
+          consent: Odběratelé vyjádřili souhlas pouze s přijímáním příspěvků emailem. Nepoužívejte tento seznam k jiným účelům.
+          date: Datum registrace
+          disable_feature: Zakázat vlastnost
+          disabled: Tato funkce byla zakázána a emaily již nejsou na tento seznam zasílány.
+          email: Emailová adresa
+          empty:
+            hint: Nikdo se zatím u tohoto účtu nepřihlásil k odběru.
+            no_subscribers_yet: Zatím žádní odběratelé
+          enable_feature: Povolit funkci
+          no_access_html: Tento účet již nemá oprávnění potřebné k zapnutí funkce. Změňte to v <a href="%{roles_path}">Role</a>.
+          title: "%{name} email newslettery"
+          view_account: Zobrazit účet
         status: Status
+        subscribers: Odběratelé
+        title: Mailové seznamy
+      additional_footer_texts:
+        show:
+          title: Dodatečný text v zápatí
       compliance_settings:
         additional_footer_text:
           action: Spravovat
+          hint: Volitelný text, který se zobrazí pouze v zápatí newsletter e-mailů
+          title: Dodatečný text v zápatí
+        lead: E-mailové newslettery mohou být považovány za marketingové e-maily v závislosti na jurisdikcích, kde působíte.
         privacy_policy:
           action: Spravovat
+          hint: Tyto zásady jsou uvedeny v zápatí každého e-mailu
+          title: Zásady ochrany osobních údajů
+        title: Nastavení souladu s předpisy
+      danger_zone:
+        disable_feature:
+          action: Vypnout
+          hint: Vypnout funkci pro všechny účty
+          title: Vypnout funkci
+        erase_all_data:
+          action: Vymazat data
+          hint: Trvale smaže všechny e-maily ve všech mailových seznamech
+          title: Vymazat všechna data
+        title: Nebezpečná zóna
+      disabled_msg: E-mailové odběry byly úspěšně vypnuty.
+      index:
+        disabled:
+          cannot_be_enabled: Váš poskytovatel technických služeb tuto funkci pro váš server nepovolil.
+          description: Tato funkce umožňuje vybraným účtům přidat si na profil widget, díky kterému mohou návštěvníci bez účtu na Mastodonu odebírat jejich příspěvky e-mailem.
+          get_started: Začít
+        lead: Umožnit návštěvníkům přijímat příspěvky e-mailem z vybraných účtů na tomto serveru.
+        title: Email newslettery
+      purged_msg: Všechna data o odběrech e-mailů se mažou.
       roles:
+        accounts: Účty
         edit_role: Upravit roli
+        empty:
+          hint: Nikdo nemá oprávnění k užívání této funkce.
+          no_roles_added: Nebyly přidány žádné role
+        lead: Účty s následujícími rolemi si mohou tuto funkci aktivovat ve svých profilech.
         manage_roles: Spravovat role
         role_name: Název role
         title: Role
+      setups:
+        show:
+          enable_feature: Povolit funkci
+          important_information: Důležité informace
+          list:
+            1_permission_explanation: Když je tato funkce zapnutá, účty s příslušným oprávněním mohou na své profily přidat formulář pro sběr e-mailů.
+            2_feature_explanation: Jakmile se návštěvníci příhlásí na profilové stránce účtu k odběru a potvrdí ho, začnou dostávat e-mailová upozornění pokaždé, když daný účet vytvoří nový veřejný příspěvek.
+            3_privacy_policy_warning: Administrátoři serveru budou mít přístup k PII (e-mailové adresy). Zásady ochrany osobních údajů a Smluvní podmínky pro server musí být tudíž aktualizovány před použitím této funkce.
+            4_cost_warning: Za odesílání e-mailů si váš hosting může účtovat poplatky. Před spuštěním se raději poraďte s podporou hostingu, jelikož tato funkce může razantně zvýšit počet e-mailů odeslaných z vašeho serveru.
     export_domain_allows:
       new:
         title: Importovat povolené domény
@@ -712,6 +788,7 @@ cs:
       action_log: Protokol auditu
       action_taken_by: Akci vykonal uživatel
       actions:
+        delete_description_html: Nahlášené příspěvky a/nebo kolekce budou smazány a prohřešek zaznamenán pro pomoc s případnou eskalací v případě budoucích přestupků stejného účtu.
         mark_as_sensitive_description_html: Média v nahlášených příspěvcích budou označena jako citlivá a bude zaznamenán prohřešek pro pomoc s eskalací v případě budoucích porušení stejným účtem.
         other_description_html: Podívejte se na další možnosti kontroly chování účtu a přizpůsobte komunikaci k nahlášenému účtu.
         resolve_description_html: Nebudou učiněny žádné kroky proti nahlášenému účtu, žádný prohřešek zaznamenán a hlášení bude uzavřeno.
@@ -738,6 +815,7 @@ cs:
       confirm: Potvrdit
       confirm_action: Potvrdit moderátorskou akci vůči @%{acct}
       created_at: Nahlášené
+      delete_and_resolve: Odstranit obsah
       forwarded: Přeposláno
       forwarded_replies_explanation: Toto hlášení je od uživatele z jiného serveru, a je o obsahu z jeho serveru. Byl převeden na vás, protože nahlášený obsah odpovídá jednomu z vašich uživatelů.
       forwarded_to: Přeposláno na %{domain}
@@ -766,6 +844,7 @@ cs:
       resolved_msg: Hlášení úspěšně vyřešeno!
       skip_to_actions: Přeskočit k akcím
       status: Stav
+      statuses: Příspěvky (%{count})
       statuses_description_html: Obsah porušující pravidla bude uveden v komunikaci s nahlášeným účtem
       summary:
         action_preambles:
@@ -821,6 +900,8 @@ cs:
         administrator_description: Uživatelé s tímto oprávněním obejdou všechna oprávnění
         delete_user_data: Mazat uživatelská data
         delete_user_data_description: Umožňuje uživatelům bezodkladně mazat data jiných uživatelů
+        invite_bypass_approval: Pozvat uživatele bez kontroly
+        invite_bypass_approval_description: Umožňuje lidem pozvaným na server těmito uživateli obejít schválení moderováním
         invite_users: Pozvat uživatele
         invite_users_description: Umožňuje uživatelům zvát na server nové lidi
         manage_announcements: Spravovat oznámení
@@ -831,6 +912,8 @@ cs:
         manage_blocks_description: Umožňuje uživatelům blokovat poskytovatele e-mailů a IP adresy
         manage_custom_emojis: Spravovat vlastní emoji
         manage_custom_emojis_description: Umožňuje uživatelům spravovat vlastní emoji na serveru
+        manage_email_subscriptions: Spravovat e-mailové odběry
+        manage_email_subscriptions_description: Povolit uživatelům s tímto oprávněním aktivovat funkci email newsletteru pro jejich účet
         manage_federation: Spravovat federaci
         manage_federation_description: Umožňuje uživatelům blokovat nebo povolit federaci s jinými doménami a ovládat doručování
         manage_invites: Spravovat pozvánky
@@ -918,6 +1001,16 @@ cs:
           authenticated: Pouze autentifikovaní uživatelé
           disabled: Vyžadovat specifickou uživatelskou roli
           public: Všichni
+      landing_page:
+        hints:
+          about_html: Stránka s popisem, kontaktními informacemi, pravidly a dalšími informacemi týkajícími se tohoto serveru.
+          local_feed_html: Aktuální přehled nejnovějších příspěvků od uživatelů tohoto serveru.
+          overview_html: Stránka zobrazující popis serveru vedle nejnovějších lokálních příspěvků uživatelů na tomto serveru.
+          trends_html: Stránka, která zobrazuje, co je teď na tomto serveru populární.
+        values:
+          local_feed: Místní živý kanál
+          overview: Přehled
+          trends: Populární
       registrations:
         moderation_recommandation: Před otevřením registrací všem se ujistěte, že máte vhodný a reaktivní moderační tým!
         preamble: Mějte pod kontrolou, kdo může vytvořit účet na vašem serveru.
@@ -937,6 +1030,7 @@ cs:
     site_uploads:
       delete: Odstranit nahraný soubor
       destroyed_msg: Upload stránky byl úspěšně smazán!
+    skip_to_content: Přeskočit na obsah
     software_updates:
       critical_update: Kritické — aktualizujte, prosím, co nejdříve
       description: Doporučuje se udržovat vaši instalaci Mastodonu aktuální, aby se využily nejnovější opravy a funkce. Kromě toho je někdy velmi důležité včas aktualizovat Mastodon, aby se předešlo bezpečnostním problémům. Z těchto důvodů Mastodon kontroluje aktualizace každých 30 minut a bude vás informovat podle nastavení vašeho e-mailového oznámení.

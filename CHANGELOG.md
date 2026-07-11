@@ -2,6 +2,66 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.6.3] - 2026-07-03
+
+### Security
+
+- Update dependencies
+
+### Added
+
+- Add “Update available” navigation item at top of navbar when new Mastodon versions are available (#39705 by @ClearlyClaire)
+- Add rendering of post images in emails (#39636 by @diondiondion)
+
+### Fixed
+
+- Fix “view collection” menu item appearing on collection page (#39694 by @mkljczk)
+- Fix incorrect filter cache key sometimes causing incorrect filters to be applied (#39698 by @ClearlyClaire)
+- Fix missing `to_json` to publish announcement reaction worker (#39685 by @mjankowski)
+- Fix duplicate "clear" button shown in main search input in Chrome (#39679 by @diondiondion)
+- Fix visual glitch with the spoiler button (#39677 by @ChaosExAnima)
+- Fix invisible username during post highlight animation (#39659 by @diondiondion)
+- Fix follow button floating on profiles when overview landing page is enabled (#39650 by @FFederi)
+- Fix encryption warning "read more" link (#39635 by @thomas-pike)
+- Fix `tootctl media lookup` failing on some setups (#39615 by @brookmiles)
+- Fix visible transparent navigation link borders in Windows forced-contrast mode (#39614 by @diondiondion)
+- Fix crash with some browser extensions injecting custom elements in the page (#39507 by @OriginalRoOhi)
+
+## [4.6.2] - 2026-06-25
+
+### Security
+
+- Update FFMpeg version used in the container image to fix [CVE-2026-8461](https://github.com/advisories/GHSA-qff7-4q6c-m8h6) (critical severity)
+
+## [4.6.1] - 2026-06-24
+
+### Security
+
+- Update dependencies
+
+### Added
+
+- Add `avatar_description` and `header_description` to `/api/v1/accounts/update_credentials` (#39547 and #39574 by @ClearlyClaire and @mkljczk)
+  - This is available starting from Mastodon API version `11` and intended to provide an easier implementation path for clients implementing a similar feature in forks.
+  - The new `/api/v1/profile` API remains the recommended API for setting avatar and header description as well as other profile values.
+
+### Fixed
+
+- Fix combobox menu not closing after a selection (#39595 by @diondiondion)
+- Fix Emoji IndexedDB upgrades when multiple tabs are open (#39576 by @ChaosExAnima)
+- Fix combobox listbox not scrolling up when new suggestions have loaded (#39588 by @diondiondion)
+- Fix media modal navigation in RTL languages (#39587 by @diondiondion)
+- Fix accounts not visible in collection editor in advanced web interface (#39586 by @diondiondion)
+- Fix error on login with certain LDAP configurations (#39571 by @oneiros)
+- Fix simplified layout applying to other pages in web UI (#39570 by @Gargron)
+- Fix emoji database loading in web worker (#39558 and #39562 by @ChaosExAnima)
+- Fix display name length limit being incorrectly enforced in web UI (#39499 by @shleeable)
+- Fix advanced UI columns not using mobile styles (#39528 by @diondiondion)
+- Fix "private mention" post heading overlapping thread line (#39521 and #39554 by @diondiondion)
+- Fix misattribution of remote featured collections in some cases (#39523, #39525, and #39550 by @oneiros)
+- Fix custom profile field overflow (#39513 by @diondiondion)
+- Fix fetching unknown key when it's not the actor's first, and add error handling for unavailable keys (#39512 by @ClearlyClaire)
+
 ## [4.6.0] - 2026-06-17
 
 ### Added
