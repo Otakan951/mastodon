@@ -518,7 +518,7 @@ body > [data-popper-placement] {
 }
 
 .autosuggest-account .account__avatar,
-.autosuggest-emoji img {
+.autosuggest-emoji .emojione {
   display: block;
   width: 24px;
   height: 24px;
@@ -7255,6 +7255,7 @@ a.status-card {
   border-radius: 8px;
   position: relative;
   width: 100%;
+  max-width: 100%;
   min-height: 64px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -8259,6 +8260,10 @@ noscript {
   justify-content: center;
   align-items: center;
 
+  img {
+    user-select: none;
+  }
+
   &.dragging {
     cursor: grabbing;
   }
@@ -8270,7 +8275,7 @@ noscript {
     transform: translate(-50%, -50%);
     border: 2px solid var(--color-text-on-media);
     border-radius: 50%;
-    box-shadow: 0 0 0 9999em var(--color-shadow-primary);
+    box-shadow: 0 0 0 9999em rgb(from black r g b / 25%);
     pointer-events: none;
   }
 }
@@ -8573,7 +8578,7 @@ noscript {
   }
 
   &__pagination {
-    padding: 15px;
+    padding: 0 12px 15px 0;
     color: var(--color-text-secondary);
     position: absolute;
     bottom: 3px;
@@ -8598,7 +8603,10 @@ noscript {
   align-items: center;
   margin-top: 15px;
   margin-inline-start: -2px;
-  width: calc(100% - (90px - 33px));
+
+  --pagination-width: 70px;
+
+  width: calc(100% - var(--pagination-width));
 
   &__item {
     flex-shrink: 0;
@@ -8732,6 +8740,7 @@ noscript {
   bottom: 20px;
   inset-inline-end: 20px;
   width: 300px;
+  background-color: var(--color-bg-primary);
   box-shadow: var(--dropdown-shadow);
 
   &__footer {
@@ -11022,10 +11031,14 @@ noscript {
 }
 
 .column-footer {
-  padding: 16px;
   position: sticky;
   bottom: 0;
+  padding: 16px;
   background: var(--color-bg-primary);
+
+  @media (width <= $mobile-menu-breakpoint) {
+    padding-bottom: calc(16px + var(--mobile-bottom-nav-height, 0));
+  }
 }
 
 .lists-scrollable {

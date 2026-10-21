@@ -35,7 +35,7 @@ cy:
       many: Postiad
       one: Postiad
       other: Postiad
-      two: Bostiad
+      two: Postiad
       zero: Postiad
     posts_tab_heading: Postiadau
     self_follow_error: Chewch chi ddim dilyn eich cyfrif eich hun
@@ -1306,6 +1306,7 @@ cy:
           zero: Wedi'i ddefnyddio gan %{count} o bobl dros yr wythnos ddiwethaf
       title: Argymhellion a Threndiau
       trending: Trendio
+    update_available: Diweddariad ar gael
     username_blocks:
       add_new: Ychwanegu newydd
       block_registrations: Rhwystro cofrestriadau
@@ -1553,7 +1554,6 @@ cy:
   deletes:
     challenge_not_passed: Nid oedd y wybodaeth a roesoch yn gywir
     confirm_password: Mewnbynnwch eich cyfrinair presennol i gadarnhau mai chi sydd yno
-    confirm_username: Rhowch eich enw defnyddiwr i gadarnhau'r weithdrefn
     proceed: Dileu cyfrif
     success_msg: Llwyddwyd i ddileu eich cyfrif
     warning:
@@ -2244,7 +2244,6 @@ cy:
     appearance: Golwg
     authorized_apps: Apiau awdurdodedig
     back: Nôl i Mastodon
-    delete: Dileu cyfrif
     development: Datblygu
     edit_profile: Golygu'r proffil
     export: Allforio
